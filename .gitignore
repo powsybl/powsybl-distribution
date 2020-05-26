@@ -1,0 +1,19 @@
+# Maven projects
+/cgmes-validation/target/
+/distribution-validation/target/
+/target/
+
+# Compilation settings
+install.cfg
+
+# Intellij
+*.iml
+/.idea
+
+# Eclipse projects
+.classpath
+.project
+org.eclipse.core.resources.prefs
+org.eclipse.jdt.core.prefs
+org.eclipse.m2e.core.prefs
+
