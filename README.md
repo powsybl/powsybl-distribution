@@ -1,5 +1,6 @@
 # PowSyBl Distribution
 
+[![Actions Status](https://github.com/powsybl/powsybl-distribution/workflows/CI/badge.svg)](https://github.com/powsybl/powsybl-distribution/actions)
 [![MPL-2.0 License](https://img.shields.io/badge/license-MPL_2.0-blue.svg)](https://www.mozilla.org/en-US/MPL/2.0/)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/powsybl)
 
@@ -41,10 +42,12 @@ PowSyBl Distribution allows the generation of a basic distribution of PowSyBl. I
 
 ## Getting started
 
-Create a `.itools` folder in your `$HOME` if it does not exist and copy the [configuration file](resources/config/config-distrib.yml) in it:
+Create a `.itools` folder in your `${HOME}` if it does not exist and copy the [configuration file](resources/config/config-distrib.yml) in it:
 ```
 $ cp ${PROJECT_ROOT_PATH}/resources/config/config-distrib.yml ${HOME}/.itools/config-distrib.yml
 ```
+
+NB: Please note that this distribution **will not** take your personal `config.yml` file into account if you have one.
 
 To generate a PowSyBl basic distribution, you can then launch from the root repository:
 ```
