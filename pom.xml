@@ -44,6 +44,8 @@
 
     <dependencies>
 
+        <!-- Compile dependencies !-->
+
         <dependency>
             <groupId>com.powsybl</groupId>
             <artifactId>powsybl-scripting</artifactId>
@@ -55,6 +57,8 @@
             <artifactId>powsybl-security-analysis-api</artifactId>
             <version>${powsyblcore.version}</version>
         </dependency>
+
+        <!-- Runtime dependencies !-->
 
         <dependency>
             <groupId>ch.qos.logback</groupId>
