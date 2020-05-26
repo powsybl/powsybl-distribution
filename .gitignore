@@ -1,6 +1,4 @@
 # Maven projects
-/cgmes-validation/target/
-/distribution-validation/target/
 /target/
 
 # Compilation settings

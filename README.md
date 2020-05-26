@@ -55,4 +55,5 @@ $ cd ${PROJECT_ROOT_PATH}
 $ mvn clean package
 ```
 
-The PowSyBl distribution is generated in the `${PROJECT_ROOT_PATH}/target` folder.
+The PowSyBl distribution is generated in the `${PROJECT_ROOT_PATH}/target` folder. For easier use of itools commands, adding
+`${PROJECT_ROOT_PATH}/target/powsybl/bin` to your environment variable `$PATH` is recommended.
