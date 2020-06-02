@@ -22,7 +22,7 @@ By participating, you are expected to uphold this code. Please report unacceptab
 
 ## PowSyBl vs PowSyBl Distribution
 
-PowSyBl Distribution allows the generation of a basic distribution of PowSyBl. It supports the following itools commands:
+PowSyBl Distribution allows for the generation of a basic distribution of PowSyBl. It supports the following itools commands:
 
 **Computation**
 - [`compare-security-analysis-results`](https://www.powsybl.org/docs/tools/compare-security-analysis-results.html)
@@ -49,12 +49,12 @@ you can use your personal `config.yml` file if you have one, provided the necess
 
 Create a `.itools` folder in your `HOME` repository if it does not exist and copy the [configuration file](resources/config/config.yml) in it:
 ```
-$ cp <PROJECT_ROOT_PATH>/resources/config/config.yml ${HOME}/.itools/config.yml
+$ cp <PROJECT_ROOT_PATH>/resources/config/config.yml <HOME>/.itools/config.yml
 ```
 
 ### Distribution generation
 
-To generate a PowSyBl basic distribution, you can then launch from the root repository:
+To generate a basic PowSyBl distribution, you can then launch from the root repository:
 ```
 $ cd <PROJECT_ROOT_PATH>
 $ mvn clean package
