@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2020, RTE (http://www.rte-france.com)
+    This Source Code Form is subject to the terms of the Mozilla Public
+    License, v. 2.0. If a copy of the MPL was not distributed with this
+    file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -17,6 +25,7 @@
     <properties>
         <logback.version>1.1.8</logback.version>
         <powsyblcore.version>3.3.0</powsyblcore.version>
+        <powsyblolf.version>0.3.0</powsyblolf.version>
         <slf4j.version>1.7.22</slf4j.version>
     </properties>
 
@@ -35,8 +44,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <packageName>powsybl</packageName>
-                    <configName>config-distrib</configName>
+                    <packageName>powsybl-distribution-1.0.0</packageName>
                 </configuration>
             </plugin>
         </plugins>
@@ -44,33 +52,10 @@
 
     <dependencies>
 
-        <!-- Compile dependencies !-->
-
-        <dependency>
-            <groupId>com.powsybl</groupId>
-            <artifactId>powsybl-scripting</artifactId>
-            <version>${powsyblcore.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.powsybl</groupId>
-            <artifactId>powsybl-security-analysis-api</artifactId>
-            <version>${powsyblcore.version}</version>
-        </dependency>
-
-        <!-- Runtime dependencies !-->
-
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.powsybl</groupId>
-            <artifactId>powsybl-action-dsl</artifactId>
-            <version>${powsyblcore.version}</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -84,6 +69,13 @@
         <dependency>
             <groupId>com.powsybl</groupId>
             <artifactId>powsybl-config-classic</artifactId>
+            <version>${powsyblcore.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.powsybl</groupId>
+            <artifactId>powsybl-contingency-dsl</artifactId>
             <version>${powsyblcore.version}</version>
             <scope>runtime</scope>
         </dependency>
@@ -111,6 +103,20 @@
 
         <dependency>
             <groupId>com.powsybl</groupId>
+            <artifactId>powsybl-scripting</artifactId>
+            <version>${powsyblcore.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.powsybl</groupId>
+            <artifactId>powsybl-security-analysis-api</artifactId>
+            <version>${powsyblcore.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.powsybl</groupId>
             <artifactId>powsybl-ucte-converter</artifactId>
             <version>${powsyblcore.version}</version>
             <scope>runtime</scope>
@@ -119,7 +125,7 @@
         <dependency>
             <groupId>com.powsybl</groupId>
             <artifactId>powsybl-open-loadflow</artifactId>
-            <version>0.3.0</version>
+            <version>${powsyblolf.version}</version>
             <scope>runtime</scope>
         </dependency>
 

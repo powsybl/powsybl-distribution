@@ -42,18 +42,23 @@ PowSyBl Distribution allows the generation of a basic distribution of PowSyBl. I
 
 ## Getting started
 
-Create a `.itools` folder in your `${HOME}` if it does not exist and copy the [configuration file](resources/config/config-distrib.yml) in it:
+### Optional: Set the default configuration
+
+This step will allow you to set a default configuration for your basic PowSyBl distribution. Please note that
+you can use your personal `config.yml` file if you have one, provided the necessary configuration modules are filled.
+
+Create a `.itools` folder in your `HOME` repository if it does not exist and copy the [configuration file](resources/config/config.yml) in it:
 ```
-$ cp ${PROJECT_ROOT_PATH}/resources/config/config-distrib.yml ${HOME}/.itools/config-distrib.yml
+$ cp <PROJECT_ROOT_PATH>/resources/config/config.yml ${HOME}/.itools/config.yml
 ```
 
-NB: Please note that this distribution **will not** take your personal `config.yml` file into account if you have one.
+### Distribution generation
 
 To generate a PowSyBl basic distribution, you can then launch from the root repository:
 ```
-$ cd ${PROJECT_ROOT_PATH}
+$ cd <PROJECT_ROOT_PATH>
 $ mvn clean package
 ```
 
-The PowSyBl distribution is generated in the `${PROJECT_ROOT_PATH}/target` folder. For easier use of itools commands, adding
-`${PROJECT_ROOT_PATH}/target/powsybl/bin` to your environment variable `$PATH` is recommended.
+The PowSyBl distribution is generated in the `<PROJECT_ROOT_PATH>/target` folder. For easier use of itools commands, adding
+`<PROJECT_ROOT_PATH>/target/powsybl-distribution-<powsybldistribution.version>/bin` to your environment variable `PATH` is recommended.

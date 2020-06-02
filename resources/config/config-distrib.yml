@@ -1,6 +1,0 @@
-componentDefaultConfig:
-  SecurityAnalysisFactory: com.powsybl.security.SecurityAnalysisFactoryImpl
-  ContingenciesProviderFactory: com.powsybl.action.dsl.GroovyDslContingenciesProviderFactory
-  
-computation-local:
-  availableCore: 1
