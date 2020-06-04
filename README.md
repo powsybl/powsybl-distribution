@@ -30,7 +30,6 @@ PowSyBl Distribution allows for the generation of a basic distribution of PowSyB
 - [`loadflow-validation`](https://www.powsybl.org/docs/tools/loadflow-validation.html)
 - [`security-analysis`](https://www.powsybl.org/docs/tools/security-analysis.html)
 
-
 **Data conversion**
 - [`convert-network`](https://www.powsybl.org/docs/tools/convert-network.html)
 
@@ -42,18 +41,6 @@ PowSyBl Distribution allows for the generation of a basic distribution of PowSyB
 
 ## Getting started
 
-### Optional: Set the default configuration
-
-This step will allow you to set a default configuration for your basic PowSyBl distribution. Please note that
-you can use your personal `config.yml` file if you have one, provided the necessary configuration modules are filled.
-
-Create a `.itools` folder in your `HOME` repository if it does not exist and copy the [configuration file](resources/config/config.yml) in it:
-```
-$ cp <PROJECT_ROOT_PATH>/resources/config/config.yml <HOME>/.itools/config.yml
-```
-
-### Distribution generation
-
 To generate a basic PowSyBl distribution, you can then launch from the root repository:
 ```
 $ cd <PROJECT_ROOT_PATH>
@@ -62,3 +49,10 @@ $ mvn clean package
 
 The PowSyBl distribution is generated in the `<PROJECT_ROOT_PATH>/target` folder. For easier use of itools commands, adding
 `<PROJECT_ROOT_PATH>/target/powsybl-distribution-<powsybldistribution.version>/bin` to your environment variable `PATH` is recommended.
+
+Notes:
+- Test network files in the [`resources`](https://github.com/powsybl/powsybl-distribution/tree/master/resources) folder are present
+in the `etc` folder of the generated distribution.
+- A configuration file is provided in this distribution but will be overriden by your local configuration file if you have one.
+
+To learn more about how to use this basic PowSyBl distribution, go to our [beginner guide](https://www.powsybl.org/docs/todo.html).

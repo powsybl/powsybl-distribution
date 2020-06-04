@@ -45,6 +45,26 @@
                 </executions>
                 <configuration>
                     <packageName>powsybl-distribution-1.0.0</packageName>
+                    <copyToEtc>
+                        <files>
+                            <file>${project.basedir}/resources/config/config.yml</file>
+                            <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BC_BE_v2/MicroGridTestConfiguration_BC_BE_DL_V2.xml</file>
+                            <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BC_BE_v2/MicroGridTestConfiguration_BC_BE_DY_V2.xml</file>
+                            <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BC_BE_v2/MicroGridTestConfiguration_BC_BE_EQ_V2.xml</file>
+                            <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BC_BE_v2/MicroGridTestConfiguration_BC_BE_GL_V2.xml</file>
+                            <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BC_BE_v2/MicroGridTestConfiguration_BC_BE_SSH_V2.xml</file>
+                            <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BC_BE_v2/MicroGridTestConfiguration_BC_BE_SV_V2.xml</file>
+                            <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BC_BE_v2/MicroGridTestConfiguration_BC_BE_TP_V2.xml</file>
+                            <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BD_v2/MicroGridTestConfiguration_EQ_BD.xml</file>
+                            <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BD_v2/MicroGridTestConfiguration_TP_BD.xml</file>
+                            <file>${project.basedir}/resources/IEEE/ieee300cdf.xiidm</file>
+                            <file>${project.basedir}/resources/UCTE/beTestGridForMerging.uct</file>
+                            <file>${project.basedir}/resources/UCTE/frTestGridForMerging.uct</file>
+                            <file>${project.basedir}/resources/UCTE/germanTsos.uct</file>
+                            <file>${project.basedir}/resources/UCTE/uxTestGridForMerging.uct</file>
+                            <file>${project.basedir}/resources/XIIDM/eurostag-tutorial-example1.xml</file>
+                        </files>
+                    </copyToEtc>
                 </configuration>
             </plugin>
         </plugins>
