@@ -24,8 +24,8 @@
 
     <properties>
         <logback.version>1.1.8</logback.version>
-        <powsyblcore.version>3.3.0</powsyblcore.version>
-        <powsyblolf.version>0.3.0</powsyblolf.version>
+        <powsyblcore.version>3.5.0</powsyblcore.version>
+        <powsyblolf.version>0.5.0</powsyblolf.version>
         <slf4j.version>1.7.22</slf4j.version>
     </properties>
 
@@ -57,7 +57,7 @@
                             <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BC_BE_v2/MicroGridTestConfiguration_BC_BE_TP_V2.xml</file>
                             <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BD_v2/MicroGridTestConfiguration_EQ_BD.xml</file>
                             <file>${project.basedir}/resources/CGMES/CGMES_v2.4.15_MicroGridTestConfiguration_BD_v2/MicroGridTestConfiguration_TP_BD.xml</file>
-                            <file>${project.basedir}/resources/IEEE/ieee300cdf.xiidm</file>
+                            <file>${project.basedir}/resources/IEEE/ieee300cdf.txt</file>
                             <file>${project.basedir}/resources/UCTE/beTestGridForMerging.uct</file>
                             <file>${project.basedir}/resources/UCTE/frTestGridForMerging.uct</file>
                             <file>${project.basedir}/resources/UCTE/germanTsos.uct</file>
