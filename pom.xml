@@ -23,9 +23,10 @@
     <version>1.1.0</version>
 
     <properties>
+        <java.version>11</java.version>
         <logback.version>1.1.8</logback.version>
-        <powsyblcore.version>3.8.0</powsyblcore.version>
-        <powsyblolf.version>0.8.0</powsyblolf.version>
+        <powsyblcore.version>4.0.1</powsyblcore.version>
+        <powsyblolf.version>0.9.0</powsyblolf.version>
         <slf4j.version>1.7.22</slf4j.version>
     </properties>
 
