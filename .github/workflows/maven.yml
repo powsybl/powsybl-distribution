@@ -18,3 +18,9 @@ jobs:
 
     - name: Package
       run: mvn --batch-mode package
+      
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: powsybl-distribution-1.2.0
+        path: target/powsybl-distribution-1.2.0
