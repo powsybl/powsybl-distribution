@@ -13,12 +13,12 @@ PowSyBl is part of the LF Energy Foundation, a project of The Linux Foundation t
 within the energy and electricity sectors.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/powsybl/powsybl-gse/master/gse-spi/src/main/resources/images/logo_lfe_powsybl.svg?sanitize=true" alt="PowSyBl Logo" width="50%"/>
+<img src="https://raw.githubusercontent.com/powsybl/powsybl-gse/main/gse-spi/src/main/resources/images/logo_lfe_powsybl.svg?sanitize=true" alt="PowSyBl Logo" width="50%"/>
 </p>
 
 Read more at https://www.powsybl.org !
 
-This project and everyone participating in it is governed by the [PowSyBl Code of Conduct](https://github.com/powsybl/.github/blob/master/CODE_OF_CONDUCT.md).
+This project and everyone participating in it is governed by the [PowSyBl Code of Conduct](https://github.com/powsybl/.github/blob/main/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior to [powsybl-tsc@lists.lfenergy.org](mailto:powsybl-tsc@lists.lfenergy.org).
 
 ## PowSyBl vs PowSyBl Distribution
@@ -52,7 +52,7 @@ The PowSyBl distribution is generated in the `<PROJECT_ROOT_PATH>/target` folder
 `<PROJECT_ROOT_PATH>/target/powsybl-distribution-<powsybldistribution.version>/bin` to your environment variable `PATH` is recommended.
 
 Notes:
-- Test network files in the [`resources`](https://github.com/powsybl/powsybl-distribution/tree/master/resources) folder are present
+- Test network files in the [`resources`](https://github.com/powsybl/powsybl-distribution/tree/main/resources) folder are present
 in the `etc` folder of the generated distribution.
 - A configuration file is provided in this distribution but will be overriden by your local configuration file if you have one.
 
