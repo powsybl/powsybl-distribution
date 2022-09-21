@@ -20,12 +20,12 @@
     </parent>
     <artifactId>powsybl-distribution</artifactId>
     <packaging>pom</packaging>
-    <version>1.7.0</version>
+    <version>1.8.0</version>
 
     <properties>
         <java.version>11</java.version>
         <logback.version>1.2.0</logback.version>
-        <powsybldependencies.version>1.2.0</powsybldependencies.version>
+        <powsybldependencies.version>1.3.0</powsybldependencies.version>
         <slf4j.version>1.7.22</slf4j.version>
     </properties>
 
@@ -55,7 +55,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <packageName>powsybl-distribution-1.7.0</packageName>
+                    <packageName>powsybl-distribution-1.8.0</packageName>
                     <copyToEtc>
                         <files>
                             <file>${project.basedir}/resources/config/config.yml</file>

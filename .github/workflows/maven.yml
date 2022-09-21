@@ -22,5 +22,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: powsybl-distribution-1.7.0
-        path: target/powsybl-distribution-1.7.0
+        name: powsybl-distribution-1.8.0
+        path: target/powsybl-distribution-1.8.0
