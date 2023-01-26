@@ -1,3 +1,7 @@
 componentDefaultConfig:
   SecurityAnalysisFactory: com.powsybl.security.SecurityAnalysisFactoryImpl
   ContingenciesProviderFactory: com.powsybl.contingency.dsl.GroovyDslContingenciesProviderFactory
+
+load-flow:
+  default-impl-name: "OpenLoadFlow"
+
