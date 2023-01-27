@@ -5,3 +5,5 @@ componentDefaultConfig:
 load-flow:
   default-impl-name: "OpenLoadFlow"
 
+security-analysis:
+  default-impl-name: "OpenLoadFlow"
