@@ -56,7 +56,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <packageName>powsybl-distribution-2.0.0</packageName>
+                    <packageName>powsybl-distribution-2023.0.0</packageName>
                     <copyToEtc>
                         <files>
                             <file>${project.basedir}/resources/config/config.yml</file>
