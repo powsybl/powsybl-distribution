@@ -197,30 +197,6 @@
 
         <dependency>
             <groupId>com.powsybl</groupId>
-            <artifactId>powsybl-action-dsl</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.powsybl</groupId>
-            <artifactId>powsybl-action-dsl-spi</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.powsybl</groupId>
-            <artifactId>powsybl-action-simulator</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.powsybl</groupId>
-            <artifactId>powsybl-action-util</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.powsybl</groupId>
             <artifactId>powsybl-triple-store-impl-rdf4j</artifactId>
             <scope>runtime</scope>
             <exclusions>
