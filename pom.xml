@@ -20,12 +20,12 @@
     </parent>
     <artifactId>powsybl-distribution</artifactId>
     <packaging>pom</packaging>
-    <version>2.0.0</version>
+    <version>2023.0.0</version>
 
     <properties>
         <java.version>11</java.version>
         <logback.version>1.2.0</logback.version>
-        <powsybldependencies.version>2.0.0</powsybldependencies.version>
+        <powsybldependencies.version>2023.0.0</powsybldependencies.version>
         <slf4j.version>1.7.22</slf4j.version>
     </properties>
 
@@ -46,6 +46,7 @@
             <plugin>
                 <groupId>com.powsybl</groupId>
                 <artifactId>powsybl-itools-packager-maven-plugin</artifactId>
+                <version>5.1.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
