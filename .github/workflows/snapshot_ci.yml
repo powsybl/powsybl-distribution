@@ -90,10 +90,10 @@ jobs:
     - name: Package
       run: |
         mvn --batch-mode package
-        echo "DEPENDENCIES_MAVEN_PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
+        echo "MAVEN_PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: powsybl-distribution-${{ env.DEPENDENCIES_MAVEN_PROJECT_VERSION }}
-        path: target/powsybl-distribution-${{ env.DEPENDENCIES_MAVEN_PROJECT_VERSION }}
+        name: powsybl-distribution-${{ env.MAVEN_PROJECT_VERSION }}
+        path: target/powsybl-distribution-${{ env.MAVEN_PROJECT_VERSION }}
