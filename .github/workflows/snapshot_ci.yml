@@ -1,7 +1,8 @@
 name: Daily Snapshot CI
 
 on:
-  schedule:
+  - push
+  - schedule:
     - cron: "0 0 * * *"
 
 jobs:
