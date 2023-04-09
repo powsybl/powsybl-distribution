@@ -86,12 +86,14 @@ jobs:
         mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-dynawo.version -DnewVersion=${{ env.DYNAWO_MAVEN_PROJECT_VERSION }}
         mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-entsoe.version -DnewVersion=${{ env.ENTSOE_MAVEN_PROJECT_VERSION }}
         mvn --batch-mode -DskipTests=true --file powsybl-dependencies/pom.xml install
+        echo "DEP_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-entsoe/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
     - name: Checkout sources
       uses: actions/checkout@v3
 
     - name: Package
       run: |
+        mvn versions:set-property -Dproperty=powsybl-dependencies.version -DnewVersion=${{ env.DEP_MAVEN_PROJECT_VERSION }}
         mvn --batch-mode package
         echo "MAVEN_PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 

@@ -25,7 +25,7 @@
     <properties>
         <java.version>11</java.version>
         <logback.version>1.2.9</logback.version>
-        <powsybldependencies.version>2023.2.0-SNAPSHOT</powsybldependencies.version>
+        <powsybl-dependencies.version>2023.1.0</powsybl-dependencies.version>
         <slf4j.version>1.7.22</slf4j.version>
     </properties>
 
@@ -34,7 +34,7 @@
             <dependency>
                 <groupId>com.powsybl</groupId>
                 <artifactId>powsybl-dependencies</artifactId>
-                <version>${powsybldependencies.version}</version>
+                <version>${powsybl-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
