@@ -77,11 +77,11 @@ jobs:
 
     - name: Build and install dependencies
       run: |
-        mvn versions:set-property -Dproperty=powsybl-core.version -DnewVersion=${{ env.CORE_MAVEN_PROJECT_VERSION }}
-        mvn versions:set-property -Dproperty=powsybl-open-loadflow.version -DnewVersion=${{ env.OLF_MAVEN_PROJECT_VERSION }}
-        mvn versions:set-property -Dproperty=powsybl-sld.version -DnewVersion=${{ env.SLD_MAVEN_PROJECT_VERSION }}
-        mvn versions:set-property -Dproperty=powsybl-dynawo.version -DnewVersion=${{ env.DYNAWO_MAVEN_PROJECT_VERSION }}
-        mvn versions:set-property -Dproperty=powsybl-entsoe.version -DnewVersion=${{ env.ENTSOE_MAVEN_PROJECT_VERSION }}
+        mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-core.version -DnewVersion=${{ env.CORE_MAVEN_PROJECT_VERSION }}
+        mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-open-loadflow.version -DnewVersion=${{ env.OLF_MAVEN_PROJECT_VERSION }}
+        mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-sld.version -DnewVersion=${{ env.SLD_MAVEN_PROJECT_VERSION }}
+        mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-dynawo.version -DnewVersion=${{ env.DYNAWO_MAVEN_PROJECT_VERSION }}
+        mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-entsoe.version -DnewVersion=${{ env.ENTSOE_MAVEN_PROJECT_VERSION }}
         mvn --batch-mode -DskipTests=true --file powsybl-dependencies/pom.xml install
 
     - name: Checkout sources
