@@ -32,7 +32,7 @@ jobs:
         path: powsybl-open-loadflow
 
     - name: Build and install olf
-      run:
+      run: |
         mvn --batch-mode -DskipTests=true --file powsybl-open-loadflow/pom.xml install
         echo "OLF_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-open-loadflow/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
@@ -43,7 +43,7 @@ jobs:
         path: powsybl-single-line-diagram
 
     - name: Build and install sld
-      run:
+      run: |
         mvn --batch-mode -DskipTests=true --file powsybl-single-line-diagram/pom.xml install
         echo "SLD_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-single-line-diagram/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
@@ -54,7 +54,7 @@ jobs:
         path: powsybl-dynawo
 
     - name: Build and install dynawo
-      run:
+      run: |
         mvn --batch-mode -DskipTests=true --file powsybl-dynawo/pom.xml install
         echo "DYNAWO_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-dynawo/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
@@ -65,7 +65,7 @@ jobs:
         path: powsybl-entsoe
 
     - name: Build and install entsoe
-      run:
+      run: |
         mvn --batch-mode -DskipTests=true --file powsybl-entsoe/pom.xml install
         echo "ENTSOE_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-entsoe/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
