@@ -21,10 +21,59 @@ jobs:
         path: powsybl-core
 
     - name: Build and install core
-      run: |
-        pwd
-        ls
+      run:
         mvn --batch-mode -DskipTests=true --file powsybl-core/pom.xml install
+
+    - name: Checkout olf sources
+      uses: actions/checkout@v3
+      with:
+        repository: powsybl/powsybl-open-loadflow
+        path: powsybl-open-loadflow
+
+    - name: Build and install olf
+      run:
+        mvn --batch-mode -DskipTests=true --file powsybl-open-loadflow/pom.xml install
+
+    - name: Checkout sld sources
+      uses: actions/checkout@v3
+      with:
+        repository: powsybl/powsybl-single-line-diagram
+        path: powsybl-single-line-diagram
+
+    - name: Build and install sld
+      run:
+        mvn --batch-mode -DskipTests=true --file powsybl-single-line-diagram/pom.xml install
+
+    - name: Checkout dynawo sources
+      uses: actions/checkout@v3
+      with:
+        repository: powsybl/powsybl-dynawo
+        path: powsybl-dynawo
+
+    - name: Build and install dynawo
+      run:
+        mvn --batch-mode -DskipTests=true --file powsybl-dynawo/pom.xml install
+
+    - name: Checkout entsoe sources
+      uses: actions/checkout@v3
+      with:
+        repository: powsybl/powsybl-entsoe
+        path: powsybl-entsoe
+
+    - name: Build and install entsoe
+      run:
+        mvn --batch-mode -DskipTests=true --file powsybl-entsoe/pom.xml install
+
+    - name: Checkout dependencies sources
+      uses: actions/checkout@v3
+      with:
+        repository: powsybl/powsybl-dependencies
+        ref: use_sn
+        path: powsybl-dependencies
+
+    - name: Build and install dependencies
+      run:
+        mvn --batch-mode -DskipTests=true --file powsybl-dependencies/pom.xml install
 
     - name: Checkout sources
       uses: actions/checkout@v3
