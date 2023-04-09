@@ -80,9 +80,13 @@ jobs:
 
     - name: Package
       run: mvn --batch-mode package
-      
-#    - name: Upload artifact
-#      uses: actions/upload-artifact@v3
-#      with:
-#        name: powsybl-distribution-2023.1.0
-#        path: target/powsybl-distribution-2023.1.0
+
+    - name: Extract Maven project version
+      run: |
+        echo "MAVEN_PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: powsybl-distribution-${{ env.MAVEN_PROJECT_VERSION }}
+        path: target/powsybl-distribution-${{ env.MAVEN_PROJECT_VERSION }}
