@@ -101,7 +101,9 @@ jobs:
         mvn versions:set-property -Dproperty=powsybl-dependencies.version -DnewVersion=${{ env.DEP_MAVEN_PROJECT_VERSION }}
         mvn --batch-mode package
         echo "MAVEN_PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
-        target/powsybl-distribution-${{ env.MAVEN_PROJECT_VERSION }}/bin/itools version
+
+    - name: Print versions
+      run: target/powsybl-distribution-${{ env.MAVEN_PROJECT_VERSION }}/bin/itools version
 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
