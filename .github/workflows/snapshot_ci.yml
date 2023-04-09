@@ -21,7 +21,7 @@ jobs:
         path: powsybl-core
 
     - name: Build and install core
-      run:
+      run: |
         mvn --batch-mode -DskipTests=true --file powsybl-core/pom.xml install
         echo "CORE_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-core/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
