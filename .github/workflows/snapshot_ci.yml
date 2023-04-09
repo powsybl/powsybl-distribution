@@ -21,6 +21,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: powsybl/powsybl-core
+        ref: main
         path: powsybl-core
 
     - name: Build and install core
@@ -32,6 +33,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: powsybl/powsybl-open-loadflow
+        ref: main
         path: powsybl-open-loadflow
 
     - name: Build and install olf
@@ -43,6 +45,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: powsybl/powsybl-single-line-diagram
+        ref: main
         path: powsybl-single-line-diagram
 
     - name: Build and install sld
@@ -54,6 +57,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: powsybl/powsybl-dynawo
+        ref: main
         path: powsybl-dynawo
 
     - name: Build and install dynawo
@@ -65,6 +69,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: powsybl/powsybl-entsoe
+        ref: main
         path: powsybl-entsoe
 
     - name: Build and install entsoe
@@ -80,13 +85,13 @@ jobs:
 
     - name: Build and install dependencies
       run: |
-        mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-core.version -DnewVersion=${{ env.CORE_MAVEN_PROJECT_VERSION }}
-        mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-open-loadflow.version -DnewVersion=${{ env.OLF_MAVEN_PROJECT_VERSION }}
-        mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-sld.version -DnewVersion=${{ env.SLD_MAVEN_PROJECT_VERSION }}
-        mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-dynawo.version -DnewVersion=${{ env.DYNAWO_MAVEN_PROJECT_VERSION }}
-        mvn --file powsybl-dependencies/pom.xml versions:set-property -Dproperty=powsybl-entsoe.version -DnewVersion=${{ env.ENTSOE_MAVEN_PROJECT_VERSION }}
+        mvn --file powsybl-dependencies/pom.xml --batch-mode versions:set-property -Dproperty=powsybl-core.version -DnewVersion=${{ env.CORE_MAVEN_PROJECT_VERSION }}
+        mvn --file powsybl-dependencies/pom.xml --batch-mode versions:set-property -Dproperty=powsybl-open-loadflow.version -DnewVersion=${{ env.OLF_MAVEN_PROJECT_VERSION }}
+        mvn --file powsybl-dependencies/pom.xml --batch-mode versions:set-property -Dproperty=powsybl-sld.version -DnewVersion=${{ env.SLD_MAVEN_PROJECT_VERSION }}
+        mvn --file powsybl-dependencies/pom.xml --batch-mode versions:set-property -Dproperty=powsybl-dynawo.version -DnewVersion=${{ env.DYNAWO_MAVEN_PROJECT_VERSION }}
+        mvn --file powsybl-dependencies/pom.xml --batch-mode versions:set-property -Dproperty=powsybl-entsoe.version -DnewVersion=${{ env.ENTSOE_MAVEN_PROJECT_VERSION }}
         mvn --batch-mode -DskipTests=true --file powsybl-dependencies/pom.xml install
-        echo "DEP_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-entsoe/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
+        echo "DEP_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-dependencies/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
     - name: Checkout sources
       uses: actions/checkout@v3
