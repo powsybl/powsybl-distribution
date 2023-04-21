@@ -156,6 +156,12 @@
 
         <dependency>
             <groupId>com.powsybl</groupId>
+            <artifactId>powsybl-iidm-scripting</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.powsybl</groupId>
             <artifactId>powsybl-security-analysis-api</artifactId>
             <scope>runtime</scope>
         </dependency>
