@@ -150,7 +150,7 @@
 
         <dependency>
             <groupId>com.powsybl</groupId>
-            <artifactId>powsybl-scripting</artifactId>
+            <artifactId>powsybl-iidm-scripting</artifactId>
             <scope>runtime</scope>
         </dependency>
 
