@@ -15,19 +15,19 @@
     <parent>
         <groupId>com.powsybl</groupId>
         <artifactId>powsybl-parent</artifactId>
-        <version>10</version>
+        <version>15</version>
         <relativePath/>
     </parent>
     <artifactId>powsybl-distribution</artifactId>
     <packaging>pom</packaging>
-    <version>2023.3.0-SNAPSHOT</version>
+    <version>2023.3.0</version>
 
     <properties>
-        <java.version>11</java.version>
-        <logback.version>1.2.9</logback.version>
-        <powsybl-dependencies.version>2023.2.4</powsybl-dependencies.version>
-        <powsybl-core.version>5.3.2</powsybl-core.version> <!--pom import does not reach the build/plugins part-->
-        <slf4j.version>1.7.22</slf4j.version>
+        <java.version>17</java.version>
+        <logback.version>1.4.11</logback.version>
+        <powsybl-dependencies.version>2023.3.0</powsybl-dependencies.version>
+        <powsybl-core.version>6.0.0</powsybl-core.version> <!--pom import does not reach the build/plugins part-->
+        <slf4j.version>2.0.9</slf4j.version>
     </properties>
 
     <dependencyManagement>
