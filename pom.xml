@@ -25,8 +25,8 @@
     <properties>
         <java.version>17</java.version>
         <logback.version>1.4.11</logback.version>
-        <powsybl-dependencies.version>2023.3.0</powsybl-dependencies.version>
-        <powsybl-core.version>6.0.0</powsybl-core.version> <!--pom import does not reach the build/plugins part-->
+        <powsybl-dependencies.version>2023.3.1</powsybl-dependencies.version>
+        <powsybl-core.version>6.0.1</powsybl-core.version> <!--pom import does not reach the build/plugins part-->
         <slf4j.version>2.0.9</slf4j.version>
     </properties>
 
