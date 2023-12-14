@@ -25,19 +25,24 @@ By participating, you are expected to uphold this code. Please report unacceptab
 PowSyBl Distribution allows for the generation of a basic distribution of PowSyBl. It supports the following itools commands:
 
 **Computation**
-- [`compare-security-analysis-results`](https://www.powsybl.org/docs/tools/compare-security-analysis-results.html)
-- [`loadflow`](https://www.powsybl.org/docs/tools/loadflow.html)
-- [`loadflow-validation`](https://www.powsybl.org/docs/tools/loadflow-validation.html)
-- [`security-analysis`](https://www.powsybl.org/docs/tools/security-analysis.html)
+- [`compare-security-analysis-results`](https://www.powsybl.org/pages/documentation/user/itools/compare-security-analysis-results.html)
+- [`loadflow`](https://www.powsybl.org/pages/documentation/user/itools/loadflow.html)
+- [`loadflow-validation`](https://www.powsybl.org/pages/documentation/user/itools/loadflow-validation.html)
+- [`security-analysis`](https://www.powsybl.org/pages/documentation/user/itools/security-analysis.html)
+- [`action-simulator`](https://www.powsybl.org/pages/documentation/user/itools/action-simulator.html)
+- [`sensitivity-computation`](todo)
+- [`dynamic-simulation`](https://www.powsybl.org/pages/documentation/user/itools/dynamic-simulation.html)
+- [`list-dynamic-simulation-models`](todo)
 
 **Data conversion**
-- [`convert-network`](https://www.powsybl.org/docs/tools/convert-network.html)
+- [`convert-network`](https://www.powsybl.org/pages/documentation/user/itools/convert-network.html)
+- [`cim-anonymizer`](https://www.powsybl.org/pages/documentation/user/itools/cim-anonymizer.html)
 
 **Misc**
-- [`plugins-info`](https://www.powsybl.org/docs/tools/plugins-info.html)
+- [`plugins-info`](todo)
 
 **Script**
-- [`run-script`](https://www.powsybl.org/docs/tools/run-script.html)
+- [`run-script`](https://www.powsybl.org/pages/documentation/user/itools/run-script.html)
 
 ## Getting started
 
