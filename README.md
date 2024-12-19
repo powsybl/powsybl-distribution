@@ -25,24 +25,24 @@ By participating, you are expected to uphold this code. Please report unacceptab
 PowSyBl Distribution allows for the generation of a basic distribution of PowSyBl. It supports the following itools commands:
 
 **Computation**
-- [`compare-security-analysis-results`](https://www.powsybl.org/pages/documentation/user/itools/compare-security-analysis-results.html)
-- [`loadflow`](https://www.powsybl.org/pages/documentation/user/itools/loadflow.html)
-- [`loadflow-validation`](https://www.powsybl.org/pages/documentation/user/itools/loadflow-validation.html)
-- [`security-analysis`](https://www.powsybl.org/pages/documentation/user/itools/security-analysis.html)
-- [`action-simulator`](https://www.powsybl.org/pages/documentation/user/itools/action-simulator.html)
-- [`sensitivity-computation`](todo)
-- [`dynamic-simulation`](https://www.powsybl.org/pages/documentation/user/itools/dynamic-simulation.html)
-- [`list-dynamic-simulation-models`](todo)
+- [`compare-security-analysis-results`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/compare-security-analysis-results.html)
+- [`loadflow`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/loadflow.html)
+- [`loadflow-validation`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/loadflow-validation.html)
+- [`security-analysis`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/security-analysis.html)
+- [`action-simulator`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/action-simulator.html)
+- [`sensitivity-computation`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/sensitivity-computation.html)
+- [`dynamic-simulation`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/dynamic-simulation.html)
+- [`list-dynamic-simulation-models`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/list-dynamic-simulation-models.html)
 
 **Data conversion**
-- [`convert-network`](https://www.powsybl.org/pages/documentation/user/itools/convert-network.html)
-- [`cim-anonymizer`](https://www.powsybl.org/pages/documentation/user/itools/cim-anonymizer.html)
+- [`convert-network`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/convert_network.html)
+- [`cim-anonymizer`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/cim_anonymizer.html)
 
 **Misc**
-- [`plugins-info`](todo)
+- `plugins-info`: List the available plugins
 
 **Script**
-- [`run-script`](https://www.powsybl.org/pages/documentation/user/itools/run-script.html)
+- [`run-script`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/run-script.html)
 
 ## Getting started
 
@@ -59,5 +59,3 @@ Notes:
 - Test network files in the [`resources`](https://github.com/powsybl/powsybl-distribution/tree/main/resources) folder are present
 in the `etc` folder of the generated distribution.
 - A configuration file is provided in this distribution but will be overriden by your local configuration file if you have one.
-
-To learn more about how to use this basic PowSyBl distribution, go to our [beginner guide](https://www.powsybl.org/docs/todo.html).
