@@ -15,17 +15,17 @@
     <parent>
         <groupId>com.powsybl</groupId>
         <artifactId>powsybl-parent</artifactId>
-        <version>20</version>
+        <version>20.2</version>
         <relativePath/>
     </parent>
     <artifactId>powsybl-distribution</artifactId>
     <packaging>pom</packaging>
-    <version>2025.1.0-SNAPSHOT</version>
+    <version>2025.1.0</version>
 
     <properties>
         <java.version>17</java.version>
-        <powsybl-dependencies.version>2025.0.2</powsybl-dependencies.version>
-        <powsybl-core.version>6.7.2</powsybl-core.version> <!--pom import does not reach the build/plugins part-->
+        <powsybl-dependencies.version>2025.1.0</powsybl-dependencies.version>
+        <powsybl-core.version>6.8.1</powsybl-core.version> <!--pom import does not reach the build/plugins part-->
         <slf4j.version>2.0.9</slf4j.version>
     </properties>
 
