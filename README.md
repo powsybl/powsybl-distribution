@@ -32,7 +32,6 @@ PowSyBl Distribution allows for the generation of a basic distribution of PowSyB
 - [`action-simulator`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/action-simulator.html)
 - [`sensitivity-computation`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/sensitivity-computation.html)
 - [`dynamic-simulation`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/dynamic-simulation.html)
-- [`list-dynamic-simulation-models`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/list-dynamic-simulation-models.html)
 
 **Data conversion**
 - [`convert-network`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/convert_network.html)
@@ -40,6 +39,7 @@ PowSyBl Distribution allows for the generation of a basic distribution of PowSyB
 
 **Misc**
 - `plugins-info`: List the available plugins
+- [`list-dynamic-simulation-models`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/list-dynamic-simulation-models.html)
 
 **Script**
 - [`run-script`](https://powsybl.readthedocs.io/projects/powsybl-core/en/stable/user/itools/run-script.html)
