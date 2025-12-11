@@ -20,12 +20,12 @@
     </parent>
     <artifactId>powsybl-distribution</artifactId>
     <packaging>pom</packaging>
-    <version>2025.3.0-SNAPSHOT</version>
+    <version>2025.3.0</version>
 
     <properties>
         <java.version>21</java.version>
-        <powsybl-dependencies.version>2025.2.0</powsybl-dependencies.version>
-        <powsybl-core.version>7.0.1</powsybl-core.version> <!--pom import does not reach the build/plugins part-->
+        <powsybl-dependencies.version>2025.3.0</powsybl-dependencies.version>
+        <powsybl-core.version>7.1.0</powsybl-core.version> <!--pom import does not reach the build/plugins part-->
         <slf4j.version>2.0.17</slf4j.version>
     </properties>
 
