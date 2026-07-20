@@ -11,13 +11,13 @@ jobs:
 
     steps:
     - name: Set up JDK 21
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@0f481fcb613427c0f801b606911222b5b6f3083a # v5.5.0
       with:
         distribution: 'temurin'
         java-version: 21
 
     - name: Checkout core sources
-      uses: actions/checkout@v3
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
       with:
         repository: powsybl/powsybl-core
         ref: main
@@ -29,7 +29,7 @@ jobs:
         echo "CORE_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-core/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
     - name: Checkout olf sources
-      uses: actions/checkout@v3
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
       with:
         repository: powsybl/powsybl-open-loadflow
         ref: main
@@ -41,7 +41,7 @@ jobs:
         echo "OLF_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-open-loadflow/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
     - name: Checkout sld sources
-      uses: actions/checkout@v3
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
       with:
         repository: powsybl/powsybl-single-line-diagram
         ref: main
@@ -53,7 +53,7 @@ jobs:
         echo "SLD_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-single-line-diagram/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
     - name: Checkout dynawo sources
-      uses: actions/checkout@v3
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
       with:
         repository: powsybl/powsybl-dynawo
         ref: main
@@ -65,7 +65,7 @@ jobs:
         echo "DYNAWO_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-dynawo/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
     - name: Checkout entsoe sources
-      uses: actions/checkout@v3
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
       with:
         repository: powsybl/powsybl-entsoe
         ref: main
@@ -77,7 +77,7 @@ jobs:
         echo "ENTSOE_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-entsoe/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
     - name: Checkout dependencies sources
-      uses: actions/checkout@v3
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
       with:
         repository: powsybl/powsybl-dependencies
         path: powsybl-dependencies
@@ -93,7 +93,7 @@ jobs:
         echo "DEP_MAVEN_PROJECT_VERSION=$(mvn help:evaluate --file powsybl-dependencies/pom.xml -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
     - name: Checkout sources
-      uses: actions/checkout@v3
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
     - name: Package
       run: |
@@ -105,7 +105,7 @@ jobs:
       run: target/powsybl-distribution-${{ env.MAVEN_PROJECT_VERSION }}/bin/itools version
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       with:
         name: powsybl-distribution-${{ env.MAVEN_PROJECT_VERSION }}
         path: target/powsybl-distribution-${{ env.MAVEN_PROJECT_VERSION }}
